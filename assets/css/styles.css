@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-Hairline.eot');
+    src: url('LatamSans-Hairline.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-Hairline.woff2') format('woff2'),
+        url('LatamSans-Hairline.woff') format('woff'),
+        url('LatamSans-Hairline.ttf') format('truetype'),
+        url('LatamSans-Hairline.svg#LatamSans-Hairline') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-Regular.eot');
+    src: url('LatamSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-Regular.woff2') format('woff2'),
+        url('LatamSans-Regular.woff') format('woff'),
+        url('LatamSans-Regular.ttf') format('truetype'),
+        url('LatamSans-Regular.svg#LatamSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-Light.eot');
+    src: url('LatamSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-Light.woff2') format('woff2'),
+        url('LatamSans-Light.woff') format('woff'),
+        url('LatamSans-Light.ttf') format('truetype'),
+        url('LatamSans-Light.svg#LatamSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-RegularItalic.eot');
+    src: url('LatamSans-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-RegularItalic.woff2') format('woff2'),
+        url('LatamSans-RegularItalic.woff') format('woff'),
+        url('LatamSans-RegularItalic.ttf') format('truetype'),
+        url('LatamSans-RegularItalic.svg#LatamSans-RegularItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-Bold.eot');
+    src: url('LatamSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-Bold.woff2') format('woff2'),
+        url('LatamSans-Bold.woff') format('woff'),
+        url('LatamSans-Bold.ttf') format('truetype'),
+        url('LatamSans-Bold.svg#LatamSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-Extended.eot');
+    src: url('LatamSans-Extended.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-Extended.woff2') format('woff2'),
+        url('LatamSans-Extended.woff') format('woff'),
+        url('LatamSans-Extended.ttf') format('truetype'),
+        url('LatamSans-Extended.svg#LatamSans-Extended') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-BoldItalic.eot');
+    src: url('LatamSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-BoldItalic.woff2') format('woff2'),
+        url('LatamSans-BoldItalic.woff') format('woff'),
+        url('LatamSans-BoldItalic.ttf') format('truetype'),
+        url('LatamSans-BoldItalic.svg#LatamSans-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Icons';
+    src: url('LatamIcons-Bold.eot');
+    src: url('LatamIcons-Bold.eot?#iefix') format('embedded-opentype'),
+        url('LatamIcons-Bold.woff2') format('woff2'),
+        url('LatamIcons-Bold.woff') format('woff'),
+        url('LatamIcons-Bold.ttf') format('truetype'),
+        url('LatamIcons-Bold.svg#LatamIcons-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-LightItalic.eot');
+    src: url('LatamSans-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-LightItalic.woff2') format('woff2'),
+        url('LatamSans-LightItalic.woff') format('woff'),
+        url('LatamSans-LightItalic.ttf') format('truetype'),
+        url('LatamSans-LightItalic.svg#LatamSans-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-BlackItalic.eot');
+    src: url('LatamSans-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-BlackItalic.woff2') format('woff2'),
+        url('LatamSans-BlackItalic.woff') format('woff'),
+        url('LatamSans-BlackItalic.ttf') format('truetype'),
+        url('LatamSans-BlackItalic.svg#LatamSans-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-Black.eot');
+    src: url('LatamSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-Black.woff2') format('woff2'),
+        url('LatamSans-Black.woff') format('woff'),
+        url('LatamSans-Black.ttf') format('truetype'),
+        url('LatamSans-Black.svg#LatamSans-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latam Sans';
+    src: url('LatamSans-HairlineItalic.eot');
+    src: url('LatamSans-HairlineItalic.eot?#iefix') format('embedded-opentype'),
+        url('LatamSans-HairlineItalic.woff2') format('woff2'),
+        url('LatamSans-HairlineItalic.woff') format('woff'),
+        url('LatamSans-HairlineItalic.ttf') format('truetype'),
+        url('LatamSans-HairlineItalic.svg#LatamSans-HairlineItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+:root {
+  --bs-body-font-family: 'Latam Sans', sans-serif;
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+}
+
+.texto-lateral{
+         transform: rotate(-90deg); 
+         white-space: nowrap;
+        }
+        .columna-lado{
+          background-color: #FEF35B;
+          display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        #chart-nps {
+            max-width: 600px;
+            margin: 50px auto;
+            padding-top: 50px; 
+        }
+        .chart-container-title {
+            text-align: center;
+        }
+        .chart-title {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        /* Estilos para las etiquetas del Eje X (números -100, 0, +100) */
+        .apexcharts-xaxis-label {
+            font-size: 14px; /* Un poco más grande para que se vea bien */
+        }
+        /* Estilos para el eje X (la línea y las marcas) */
+        .apexcharts-xaxis-texts-g text,
+        .apexcharts-xaxis-tick {
+            fill: #333;
+            stroke: #333;
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow:
+          inset 0 0.5em 1.5em #0000001a,
+          inset 0 0.125em 0.5em #00000026;
+      }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
