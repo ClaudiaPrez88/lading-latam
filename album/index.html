@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>Ejemplo</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/album/"
+    />
+    <script src="../assets/js/color-modes.js"></script>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <style>
+      .texto-lateral{
+         transform: rotate(-90deg); 
+         white-space: nowrap;
+        }
+        .columna-lado{
+          background-color: #FEF35B;
+          display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        #chart-nps {
+            max-width: 600px;
+            margin: 50px auto;
+            padding-top: 50px; 
+        }
+        .chart-container-title {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .chart-title {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        /* Estilos para las etiquetas del Eje X (números -100, 0, +100) */
+        .apexcharts-xaxis-label {
+            font-size: 14px; /* Un poco más grande para que se vea bien */
+        }
+        /* Estilos para el eje X (la línea y las marcas) */
+        .apexcharts-xaxis-texts-g text,
+        .apexcharts-xaxis-tick {
+            fill: #333;
+            stroke: #333;
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow:
+          inset 0 0.5em 1.5em #0000001a,
+          inset 0 0.125em 0.5em #00000026;
+      }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header data-bs-theme="dark">
+      
+    </header>
+    <main>
+      <section>
+        <div class="container" style="background-color: #F7F5D7;">
+          <div class="row d-flex">
+            <div class="col-1 columna-lado">
+              <p class="texto-lateral">Resumen ejecutivo</p>
+            </div>
+            <div class="col-5 p-2">
+              <h1 class="fw-light">Sus beneficios al volar</h1>
+              <div id="chart"></div>
+            </div>
+            <div class="col-6 p-2">
+                <div class="chart-container-title">
+                  <div class="chart-title">NPS Pós Voo</div>
+                  <p>colaboradores do itaú voando com LATAM</p>
+                  <p class="mb-5">Últimos 6 meses</p>
+               </div>
+              <div id="chart-nps"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    </main>
+    <footer class="text-body-secondary py-5">
+      <div class="container">
+        <p class="float-end mb-1"><a href="#">Back to top</a></p>
+        <p class="mb-1">
+          Album example is &copy; Bootstrap, but please download and customize
+          it for yourself!
+        </p>
+        <p class="mb-0">
+          New to Bootstrap? <a href="/">Visit the homepage</a> or read our
+          <a href="../getting-started/introduction">getting started guide</a>.
+        </p>
+      </div>
+    </footer>
+   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script
+      src="../assets/dist/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+   <script>
+      
+        var options = {
+          series: [28, 71],
+          chart: {
+          width: '100%',
+          height: '300px',
+          type: 'pie',
+        },
+        labels: [
+          'Descuentos US$ 510k',
+          'Experiencia US$ 242K',
+        ],
+        colors: ['#BF9001', '#F1C233'],
+        plotOptions: {
+          pie: {
+            dataLabels: {
+              offset: -5,
+            },
+          },
+        },
+        grid: {
+          padding: {
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+          },
+        },
+        dataLabels: {
+          formatter(val, opts) {
+            const name = opts.w.globals.labels[opts.seriesIndex]
+            return [name, val.toFixed(1) + '%']
+          },
+        },
+        legend: {
+          show: false,
+        },
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+  </script>
+  <script>
+    // Supongamos que tu puntuación NPS es 45
+    const npsScore = 45; 
+
+    // Opciones de configuración del gráfico
+    var options = {
+        // La serie de datos solo tiene el valor NPS.
+        series: [{
+            name: 'NPS',
+            data: [npsScore]
+        }],
+        
+        chart: {
+            type: 'bar',
+            height: 100, // Altura muy baja para simular una línea
+            toolbar: {
+                show: false // Ocultar el menú de herramientas de ApexCharts
+            }
+        },
+        
+        // Configuración de la barra (el indicador vertical)
+        plotOptions: {
+            bar: {
+                horizontal: true, // ¡CRUCIAL: lo convierte en una barra horizontal!
+                columnWidth: '5%', // Hace que la barra parezca un indicador vertical
+            },
+        },
+
+        
+        
+        // Configuración del Eje X (la escala -100 a +100)
+        xaxis: {
+            categories: ['NPS itaú-LATAM'], // Etiqueta que aparecerá junto al eje
+            min: -100, // Límite inferior de la escala
+            max: 100,  // Límite superior de la escala
+            tickAmount: 4, // Número de divisiones (para -100, 0, +100 y una extra)
+            labels: {
+                formatter: function (val) {
+                    // Muestra los números en el eje X (-100, 0, +100)
+                    return val === 0 ? '0' : (val > 0 ? '+' + val : val.toString());
+                }
+            },
+            axisBorder: {
+                show: true,
+                color: '#333' // Color de la línea de la escala
+            },
+            axisTicks: {
+                show: true,
+                height: 10 // Altura de las marcas verticales en la línea
+            }
+        },
+        
+        // Configuración del Eje Y (lo ocultamos para que solo quede la línea)
+        yaxis: {
+           show: false,
+        },
+        
+        // Configuración de la rejilla (opcional, para controlar el espaciado)
+        grid: {
+            show: false,
+            padding: {
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0
+            }
+        },
+        
+        // Etiquetas de datos (Ocultar el valor numérico en el gráfico)
+        dataLabels: {
+            enabled: false
+        },
+        
+        // Leyenda
+        legend: {
+            show: false
+        }
+    };
+
+    // Renderizar el gráfico
+    var chart = new ApexCharts(document.querySelector("#chart-nps"), options);
+    chart.render();
+</script>
+  </body>
+</html>
