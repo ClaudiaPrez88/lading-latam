@@ -25,49 +25,76 @@
       
     </header>
     <main>
-      <section>
-        <div class="container" style="background-color: #F7F5D7;">
-          <div class="row d-flex p-4">
-            
-            <div class="col-md-6 col-sm-12">
-               <h1 class="chart-title">Sus beneficios al volar</h1>
-                <div class="contenedor-item1">
-                    <div class="col-1-item1">
-                    <div id="chart"></div>
+      <!-- Inicio de tabBars -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="item2-tab" data-bs-toggle="tab" data-bs-target="#item2-tab-pane" type="button" role="tab" aria-controls="item2-tab-pane" aria-selected="true">Item 2</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="item4-tab" data-bs-toggle="tab" data-bs-target="#item4-tab-pane" type="button" role="tab" aria-controls="item4-tab-pane" aria-selected="false">Item 4</button>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Fin de tabBars -->
+      <div class="tab-content" id="myTabContent">
+
+        <!-- Tab item 2 -->
+        <div class="tab-pane fade show active" id="item2-tab-pane" role="tabpanel" aria-labelledby="item2-tab" tabindex="0">
+          <section>
+            <div class="container" style="background-color: #F7F5D7;">
+              <div class="row d-flex p-4">
+                
+                <div class="col-md-6 col-sm-12">
+                  <h1 class="chart-title">Sus beneficios al volar</h1>
+                    <div class="contenedor-item1">
+                        <div class="col-1-item1">
+                        <div id="chart"></div>
+                      </div>
+                      <div class="col-2-item1">
+                        <p>Lorem ipsum</p>
+                        <p>Lorem ipsum</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 ">
+                    <div class="chart-container-title">
+                      <div class="chart-title">NPS Pós Voo</div>
+                      <p>colaboradores do itaú voando com LATAM</p>
+                      <p class="mb-5">Últimos 6 meses</p>
                   </div>
-                  <div class="col-2-item1">
-                    <p>Lorem ipsum</p>
-                    <p>Lorem ipsum</p>
+                  <div id="chart-nps"></div>
+                  
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+          <!-- Tab item 4 -->
+         <div class="tab-pane fade" id="item4-tab-pane" role="tabpanel" aria-labelledby="item4-tab" tabindex="0">
+            <section id="item_4" >
+              <div class="container" style="background-color:lavender">
+                <div class="row p-4 d-flex align-items-center">
+                  <div class="col-sm-12 col-md-1 ">
+                    <h1 class="item_numero_titulo">9140</h1>
+                  </div>
+                  <div class="col-sm-12 col-md-5">
+                    <h1 class="chart-title"> viagens com o contrato corporativo. ​*só ida</h1>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div id="chart_item_4A"></div>
                   </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-sm-12 ">
-                <div class="chart-container-title">
-                  <div class="chart-title">NPS Pós Voo</div>
-                  <p>colaboradores do itaú voando com LATAM</p>
-                  <p class="mb-5">Últimos 6 meses</p>
-               </div>
-              <div id="chart-nps"></div>
-              
-            </div>
+              </div>
+            </section>
           </div>
-        </div>
-      </section>
-      <section id="item_4" >
-        <div class="container" style="background-color:lavender">
-          <div class="row p-4 d-flex align-items-center">
-            <div class="col-sm-12 col-md-1 ">
-              <h1 class="item_numero_titulo">9140</h1>
-            </div>
-            <div class="col-sm-12 col-md-5">
-              <h1 class="chart-title"> viagens com o contrato corporativo. ​*só ida</h1>
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <div id="chart_item_4A"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+      </div>
+     
     
     </main>
     <footer class="text-body-secondary py-5">
@@ -78,7 +105,7 @@
    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <script
-      src="../assets/dist/js/bootstrap.bundle.min.js"
+      src="assets/dist/js/bootstrap.bundle.min.js"
       class="astro-vvvwv3sm"
     ></script>
 <script src="assets/js/charts.js"></script>
