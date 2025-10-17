@@ -27,12 +27,9 @@
     <main>
       <section>
         <div class="container" style="background-color: #F7F5D7;">
-          <div class="row d-flex">
-            <div class="col-md-1 col-sm-12 columna-lado">
-              <p class="texto-lateral">Resumen ejecutivo</p>
-            </div>
+          <div class="row d-flex p-4">
             
-            <div class="col-md-5 col-sm-12 p-4">
+            <div class="col-md-6 col-sm-12">
                <h1 class="chart-title">Sus beneficios al volar</h1>
                 <div class="contenedor-item1">
                     <div class="col-1-item1">
@@ -44,7 +41,7 @@
                   </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 p-4">
+            <div class="col-md-6 col-sm-12 ">
                 <div class="chart-container-title">
                   <div class="chart-title">NPS Pós Voo</div>
                   <p>colaboradores do itaú voando com LATAM</p>
@@ -52,6 +49,21 @@
                </div>
               <div id="chart-nps"></div>
               
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="item_4" >
+        <div class="container" style="background-color:lavender">
+          <div class="row p-4 d-flex align-items-center">
+            <div class="col-sm-12 col-md-1 ">
+              <h1 class="item_numero_titulo">9140</h1>
+            </div>
+            <div class="col-sm-12 col-md-5">
+              <h1 class="chart-title"> viagens com o contrato corporativo. ​*só ida</h1>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div id="chart_item_4A"></div>
             </div>
           </div>
         </div>
@@ -69,143 +81,6 @@
       src="../assets/dist/js/bootstrap.bundle.min.js"
       class="astro-vvvwv3sm"
     ></script>
-   <script>
-      
-        var options = {
-        series: [28, 71],
-        chart: {
-        width: '100%',
-        height: '250px',
-        type: 'pie',
-        fontFamily: 'Latam Sans',
-              },
-        labels: [
-          'Descuentos US$ 510k',
-          'Experiencia US$ 242K',
-        ],
-        colors: ['#ff1d49', '#4f3bba'],
-        plotOptions: {
-          pie: {
-            dataLabels: {
-              offset: -5,
-            },
-          },
-        },
-        grid: {
-          padding: {
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
-          },
-        },
-        dataLabels: {
-          formatter(val, opts) {
-            const name = opts.w.globals.labels[opts.seriesIndex]
-            return [name, val.toFixed(1) + '%']
-          },
-        },
-        legend: {
-          show: false,
-        },
-        };
-
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-  </script>
-  <script>
-    // Supongamos que tu puntuación NPS es 45
-    const npsScore = 45; 
-
-    // Opciones de configuración del gráfico
-    var options = {
-        // La serie de datos solo tiene el valor NPS.
-        series: [{
-            name: 'NPS',
-            data: [npsScore]
-        }],
-         colors: ['#ff1d49'],
-        chart: {
-            type: 'bar',
-            fontFamily: 'Latam Sans',
-            height: 100, // Altura muy baja para simular una línea
-            toolbar: {
-                show: false // Ocultar el menú de herramientas de ApexCharts
-            }
-        },
-        
-        // Configuración de la barra (el indicador vertical)
-        plotOptions: {
-            bar: {
-                horizontal: true, // ¡CRUCIAL: lo convierte en una barra horizontal!
-                columnWidth: '5%', // Hace que la barra parezca un indicador vertical
-            },
-        },
-        
-        // Configuración del Eje X (la escala -100 a +100)
-        xaxis: {
-            categories: ['NPS itaú-LATAM'], // Etiqueta que aparecerá junto al eje
-            min: -100, // Límite inferior de la escala
-            max: 100,  // Límite superior de la escala
-            tickAmount: 4, // Número de divisiones (para -100, 0, +100 y una extra)
-            labels: {
-                formatter: function (val) {
-                    // Muestra los números en el eje X (-100, 0, +100)
-                    return val === 0 ? '0' : (val > 0 ? '+' + val : val.toString());
-                }
-            },
-            axisBorder: {
-                show: true,
-                color: '#333' // Color de la línea de la escala
-            },
-            axisTicks: {
-                show: true,
-                height: 10 // Altura de las marcas verticales en la línea
-            }
-        },
-        
-        // Configuración del Eje Y (lo ocultamos para que solo quede la línea)
-        yaxis: {
-           show: false,
-        },
-        
-        // Configuración de la rejilla (opcional, para controlar el espaciado)
-        grid: {
-            show: false,
-            padding: {
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0
-            }
-        },
-        
-        // Etiquetas de datos (Ocultar el valor numérico en el gráfico)
-        dataLabels: {
-            enabled: true,
-            formatter: function (val) {
-            return val + ' NPS Itaú Latam'; // ← agrega el texto
-          },
-          style: {
-            fontSize: '14px',
-            fontWeight: 'bold',
-            colors: ['#000'], // color del texto
-          },
-        },
-        series: [
-          {
-            data: [50], // valor del NPS
-          },
-        ],
-        // Leyenda
-        legend: {
-            show: false
-        }
-    };
-
-    // Renderizar el gráfico
-    var chart = new ApexCharts(document.querySelector("#chart-nps"), options);
-    chart.render();
-</script>
+<script src="assets/js/charts.js"></script>
   </body>
 </html>
