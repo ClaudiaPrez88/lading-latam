@@ -362,15 +362,20 @@ a {
    ========================================================== */
 
       @media (max-width: 768px) {
-        .texto-lateral{
-          transform: rotate(0deg); 
-          font-size: 1rem;
-        }
+       
          #sidebar {
           width: 80px;
         }
 
         #sidebar ul li a span {
           display: none;
+        }
+         /* Cuando tenga la clase .toggled (abierto) */
+        #sidebar.toggled {
+          width: 250px; /* ancho completo */
+        }
+
+        #sidebar.toggled ul li a span {
+          display: inline; /* muestra los textos */
         }
       }
