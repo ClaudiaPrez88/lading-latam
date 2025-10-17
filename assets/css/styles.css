@@ -164,6 +164,8 @@ body {
 .texto-lateral{
          transform: rotate(-90deg); 
          white-space: nowrap;
+         color:#ffffff;
+         font-weight: 800;
         }
         .columna-lado{
           background-color: #FEF35B;
@@ -171,9 +173,20 @@ body {
         justify-content: center;
         align-items: center;
         }
+/* Item 1 */
+.contenedor-item1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.item1-col2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
         #chart-nps {
             max-width: 600px;
-            margin: 50px auto;
             padding-top: 50px; 
         }
         .chart-container-title {

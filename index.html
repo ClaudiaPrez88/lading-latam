@@ -31,9 +31,18 @@
             <div class="col-1 columna-lado">
               <p class="texto-lateral">Resumen ejecutivo</p>
             </div>
+            
             <div class="col-5 p-2">
-              <h1 class="fw-light">Sus beneficios al volar</h1>
-              <div id="chart"></div>
+               <h1 class="fw-light">Sus beneficios al volar</h1>
+                <div class="contenedor-item1">
+                    <div class="col-1-item1">
+                    <div id="chart"></div>
+                  </div>
+                  <div class="col-2-item1">
+                    <p>Lorem ipsum</p>
+                    <p>Lorem ipsum</p>
+                  </div>
+                </div>
             </div>
             <div class="col-6 p-2">
                 <div class="chart-container-title">
@@ -42,6 +51,10 @@
                   <p class="mb-5">Últimos 6 meses</p>
                </div>
               <div id="chart-nps"></div>
+              <div class="item1-col2">
+                <p class="mb-5">NPS Itaú Latam</p>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -51,14 +64,6 @@
     <footer class="text-body-secondary py-5">
       <div class="container">
         <p class="float-end mb-1"><a href="#">Back to top</a></p>
-        <p class="mb-1">
-          Album example is &copy; Bootstrap, but please download and customize
-          it for yourself!
-        </p>
-        <p class="mb-0">
-          New to Bootstrap? <a href="/">Visit the homepage</a> or read our
-          <a href="../getting-started/introduction">getting started guide</a>.
-        </p>
       </div>
     </footer>
    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -70,17 +75,17 @@
    <script>
       
         var options = {
-          series: [28, 71],
-          chart: {
-          width: '100%',
-          height: '300px',
-          type: 'pie',
-        },
+        series: [28, 71],
+        chart: {
+        width: '100%',
+        height: '250px',
+        type: 'pie',
+              },
         labels: [
           'Descuentos US$ 510k',
           'Experiencia US$ 242K',
         ],
-        colors: ['#BF9001', '#F1C233'],
+        colors: ['#ff1d49', '#4f3bba'],
         plotOptions: {
           pie: {
             dataLabels: {
@@ -121,7 +126,7 @@
             name: 'NPS',
             data: [npsScore]
         }],
-        
+         colors: ['#ff1d49'],
         chart: {
             type: 'bar',
             height: 100, // Altura muy baja para simular una línea
@@ -137,8 +142,6 @@
                 columnWidth: '5%', // Hace que la barra parezca un indicador vertical
             },
         },
-
-        
         
         // Configuración del Eje X (la escala -100 a +100)
         xaxis: {
@@ -180,9 +183,21 @@
         
         // Etiquetas de datos (Ocultar el valor numérico en el gráfico)
         dataLabels: {
-            enabled: false
+            enabled: true,
+            formatter: function (val) {
+            return val + ' NPS Itaú Latam'; // ← agrega el texto
+          },
+          style: {
+            fontSize: '14px',
+            fontWeight: 'bold',
+            colors: ['#000'], // color del texto
+          },
         },
-        
+        series: [
+          {
+            data: [50], // valor del NPS
+          },
+        ],
         // Leyenda
         legend: {
             show: false
