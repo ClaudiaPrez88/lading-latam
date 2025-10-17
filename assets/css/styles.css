@@ -292,6 +292,18 @@ a {
       .navbar .btn {
         color: #fff;
       }
+      .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    #sidebar ul li a.active {
+      font-weight: bold;
+      background: rgba(255,255,255,0.1);
+    }
 
   /* ==========================================================
    6. Componentes Bootstrap sobrescritos

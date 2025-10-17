@@ -37,8 +37,8 @@
     <div id="wrapper">
       <div id="sidebar">
         <ul>
-          <li><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-          <li><a href="#"><i class="fa fa-flag"></i> <span>Shortcut</span></a></li>
+          <li><a href="#" data-tab="dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+          <li><a href="#" data-tab="shortcut"><i class="fa fa-flag"></i> <span>Shortcut</span></a></li>
           <li><a href="#"><i class="fa fa-cloud-download"></i> <span>Overview</span></a></li>
           <li><a href="#"><i class="fa fa-cart-plus"></i> <span>Events</span></a></li>
           <li><a href="#"><i class="fa fa-youtube-play"></i> <span>About</span></a></li>
@@ -48,8 +48,14 @@
       </div>
 
       <div id="content">
-        <h1>Dashboard con Sidebar Toggle</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula, felis a feugiat egestas, urna augue tincidunt erat, et lacinia orci eros et nunc.</p>
+        <div id="dashboard" class="tab-content active">
+            <h1>Dashboard</h1>
+            <p>Contenido específico de Dashboard</p>
+         </div>
+         <div id="shortcut" class="tab-content">
+            <h1>Shortcut</h1>
+            <p>Contenido específico de Shortcut</p>
+         </div>
       </div>
     </div>
     </main>
