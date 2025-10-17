@@ -226,6 +226,72 @@ a {
       stroke: #333;
   }
 
+  /*Navbar*/
+ #wrapper {
+        display: flex;
+        transition: all 0.3s ease;
+      }
+
+      #sidebar {
+        width: 250px;
+        background: #000;
+        color: #999;
+        min-height: 100vh;
+        transition: all 0.3s ease;
+      }
+
+      #sidebar.toggled {
+        width: 80px;
+      }
+
+      #sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #sidebar ul li {
+        padding: 12px 20px;
+      }
+
+      #sidebar ul li a {
+        display: flex;
+        align-items: center;
+        color: #999;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      #sidebar ul li a:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+        border-left: 2px solid red;
+      }
+
+      #sidebar ul li a i {
+        width: 25px;
+        text-align: center;
+        margin-right: 10px;
+      }
+
+      #sidebar.toggled ul li a span {
+        display: none;
+      }
+
+      #content {
+        flex: 1;
+        padding: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .navbar {
+        background: #111;
+        color: #fff;
+      }
+
+      .navbar .btn {
+        color: #fff;
+      }
 
   /* ==========================================================
    6. Componentes Bootstrap sobrescritos
@@ -299,5 +365,12 @@ a {
         .texto-lateral{
           transform: rotate(0deg); 
           font-size: 1rem;
+        }
+         #sidebar {
+          width: 80px;
+        }
+
+        #sidebar ul li a span {
+          display: none;
         }
       }
